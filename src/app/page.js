@@ -78,12 +78,14 @@ export default function Home() {
     }
   };
   
-
   useEffect(() => {
-    if (menuOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
+    if (typeof window !== "undefined") {
+      // This will only run in the browser
+      if (menuOpen) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = '';
+      }
     }
   }, [menuOpen]);
 
