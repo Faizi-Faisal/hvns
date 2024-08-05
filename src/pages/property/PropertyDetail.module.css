@@ -1,0 +1,236 @@
+.pageContainer {
+  margin: 0 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  font-family: 'Poppins', sans-serif;
+}
+
+.topContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: white;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  position: sticky;
+  top: 0;
+}
+
+.topContainer p {
+  font-size: 18px;
+}
+
+.topContainer p span {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.box {
+  text-align: center;
+}
+
+.backButton, .editButton {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.editButton {
+  background-color: orange;
+}
+
+.editButton:hover {
+  background-color: yellow;
+  color: black;
+}
+
+.backButton:hover {
+  background-color: #0056b3;
+}
+
+.mainContent {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cardTag {
+  position: relative;
+  top: 0px;
+  left: 10px;
+  z-index: 10;
+  font-size: 20px;
+  color: white;
+  padding: 3px 8px;
+  border-radius: 5px;
+}
+.cardTag.boys {
+  background-color: #5BBCFF !important; /* green for boys */
+}
+
+.cardTag.girls {
+  background-color: #E90074 !important; /* pink for girls */
+}
+
+.cardTag.unisex {
+  background-color: goldenrod !important; /* golden for unisex */
+}
+
+.leftColumn {
+  flex: 0 0 66.66%;
+  padding-right: 20px;
+}
+
+.rightColumn {
+  flex: 0 0 33.33%;
+  padding-left: 20px;
+}
+
+.propertyAddress, .virtualVideoUrl {
+  margin-bottom: 20px;
+}
+
+.sharingPrices {
+  margin-bottom: 20px;
+}
+
+.sharingPrices ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sharingPrices li {
+  margin-bottom: 10px;
+}
+
+
+.propertyDetails {
+  margin-bottom: 20px;
+}
+
+.propertyName {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.propertyLocation {
+  font-size: 1.2em;
+  color: #555;
+}
+
+.imageContainer {
+  margin-bottom: 20px;
+}
+
+.mainImage img {
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.thumbnailContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.thumbnail {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.price {
+  margin-bottom: 20px;
+}
+
+.description {
+  margin-bottom: 20px;
+}
+
+.amenities {
+  margin-bottom: 20px;
+}
+
+.fullscreenOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fullscreenImageContainer {
+  position: relative;
+  width: 80%; /* Set the container width */
+  max-width: 800px; /* Optional: set a max-width for larger screens */
+  height: 80%; /* Set the container height */
+  max-height: 600px; /* Optional: set a max-height for larger screens */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fullscreenImageContainer img {
+  width: 100%; /* Make image fill the container width */
+  height: 100%; /* Make image fill the container height */
+  object-fit: contain; /* Ensure image scales correctly within the container */
+}
+
+.closeButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+
+
+.newImagePreview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+}
+
+.previewImage {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+
+.removeImageButton {
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+/* Your existing styles */
+.fullscreenOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fullscreenOverlay img {
+  max-width: 90%;
+  max-height: 90%;
+}

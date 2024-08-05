@@ -1,0 +1,42 @@
+.accordion-container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+
+  }
+
+  .accordian-faq-header {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .accordion-item {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+  }
+  
+  .accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .accordion-content {
+    display: none;
+    padding: 10px 0;
+  }
+  
+  .accordion-content.show {
+    display: block;
+  }
+  

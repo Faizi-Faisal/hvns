@@ -1,0 +1,484 @@
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.header {
+  background-color: white;
+  padding: 10px 20px;
+  display: flex;
+  border-radius: 12px;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  height: 40px;
+}
+
+.logo {
+  flex: 1;
+}
+
+.nav {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+}
+
+.navLink {
+  margin: 0 15px;
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+ 
+}
+
+.navLink:hover {
+ color: #508D4E;
+}
+.mobileMenu {
+  display: none;
+}
+
+.listProperty {
+  flex: 1;
+  text-align: right;
+}
+
+.listPropertyLink {
+  color: #80AF81;
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.carouselSection {
+  margin-top: 20px;
+  position: relative;
+ 
+  border-radius: 15px;
+}
+
+.carousel {
+  border-radius: 15px;
+  overflow: hidden;
+  height: 400px;
+}
+
+.customIndicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  background: #D6EFD8;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.indicator.selected {
+  background: #508D4E;
+  border: 2px solid #1A5319;
+  width: 16px;
+  height: 16px;
+}
+
+.searchContainer {
+  height: 80px;
+  width: 80%;
+  border-radius: 25px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 35px; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0 10px;
+}
+
+.searchInput {
+  height: 70px;
+  width: 100%;
+  border: none;
+  border-radius: 20px;
+  padding: 0 10px;
+  outline: none;
+  box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+.searchInput::placeholder {
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  text-align: left;
+}
+
+
+.toppgBnglr {
+  font-size: 26px;
+  font-weight: 600;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.bangalore {
+  color: #1A5319;
+}
+
+/* Filter Section */
+
+.filterSection {
+  margin: 20px 0;
+}
+
+.filterBox {
+  border-radius: 22px;
+  padding: 10px;
+  background-color: #D6EFD8;
+}
+
+.filterButtonContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.filterButtonWrapper {
+  position: relative;
+}
+
+.filterButton {
+  border-radius: 20px;
+  padding: 10px 20px;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  margin: 5px;
+  border: none;
+}
+
+.filterButton:hover {
+  background-color: #f0f0f0;
+}
+
+.fdropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 160px; /* Increased width for dropdown */
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-top: 5px;
+  z-index: 1000;
+}
+
+.fdropdown ul {
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+}
+
+.fdropdown li {
+  padding: 5px 0;
+}
+
+.fdropdown li a {
+  color: black; /* Dropdown list text in black */
+  text-decoration: none;
+}
+
+.fdropdown li a:hover {
+  text-decoration: underline;
+}
+
+.filterText {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding-left: 20px;
+}
+
+
+/* Filter Section End */
+
+/* Card Section CSS */
+
+.cardCustomSize {
+  width: 100%;
+  max-width: 300px; /* Adjust max width */
+  height: 450px; /* Adjust height as needed */
+  margin: auto; /* Center the card */
+  box-shadow: 0 12px 30px rgba(75, 75, 75, 0.2);
+  border-radius: 20px !important;
+  padding: 8px;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.cardCustomSize:hover {
+  transform: translateY(-5px);
+}
+
+.cardprice {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.cardmnth {
+  font-size: 12px;
+}
+
+.cardmaptext {
+  font-size: 12px;
+  text-decoration: none;
+  color: #508D4E;
+}
+
+.cardTag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 10;
+  font-size: 12px;
+  color: white;
+  padding: 3px 8px;
+  border-radius: 5px;
+}
+.cardTag.boys {
+  background-color: #5BBCFF !important; /* green for boys */
+}
+
+.cardTag.girls {
+  background-color: #E90074 !important; /* pink for girls */
+}
+
+.cardTag.unisex {
+  background-color: goldenrod !important; /* golden for unisex */
+}
+.card-img-top {
+  height: 200px; /* Adjust height as needed */
+  object-fit: cover; /* Ensure images cover the specified height */
+}
+
+.cardtitle {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.cardlocation {
+ font-size: 12px;
+ font-weight: 700;
+ color: grey; 
+}
+
+.sprice {
+  font-size: 8px;
+}
+
+.exbutton {
+  height: 45px;
+  width: 43%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  border: 1px solid #508D4E;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-right: 8px;
+  color: #1A5319;
+}
+.exbutton:hover {
+  background-color: #80AF81;
+  color: white;
+  border-color: transparent;
+}
+.reqbutton {
+  height: 45px;
+  width: 54%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  background-color: #508D4E;
+  border-radius: 8px;
+  color: white;
+  text-decoration: none;
+}
+
+.reqbutton:hover {
+  font-size: 15px;
+}
+
+/* Add this to your CSS file */
+.amenityBox {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 60px; /* Adjust width as needed */
+  height: 20px; /* Adjust height as needed */
+  border-radius: 9px;
+  margin-right: 1px; /* Adjust spacing between boxes */
+  cursor: pointer;
+}
+
+.amenityText {
+  font-size: 10px; /* Adjust font size */
+  text-align: center;
+  color: #1A5319; /* Text color */
+  font-weight: bold;
+}
+
+/* Define colors for each amenity box */
+.box1 {
+  background-color: rgba(128, 128, 128, 0); /* Background color for amenity 1 */
+}
+
+.box2 {
+  background-color: rgba(128, 128, 128, 0); /* Background color for amenity 2 */
+  width: 120px;
+}
+
+.accordion-container {
+  box-shadow: 0 12px 30px rgba(75, 75, 75, 0.2);
+}
+
+
+
+
+@media (max-width: 768px) {
+
+  .container {
+    margin: 0 10px;
+    padding: 0 10px;
+  }
+  .carousel {
+    border-radius: 15px;
+    overflow: hidden;
+    height: 100px;
+  }  
+
+  .nav,
+  .listProperty {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .mobileMenu {
+    display: none;
+    position: fixed;
+    top: 50px; /* Adjust based on your header height */
+    right: 0;
+    background-color: white;
+    width: 100%; /* Adjust based on your desired width */
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(100%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensure it is above other content */
+    padding: 10px;
+    display: inline;
+    margin-top: 12px;
+    border-radius: 12px;
+    overflow: auto;
+  }
+
+  .mobileMenu.open {
+    transform: translateX(0);
+  }
+
+  .searchContainer {
+    display: none;
+  }
+
+  .hamburger {
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .hamburger:hover {
+    transform: scale(1.1);
+  }
+
+  .mobileNavLink {
+    display: block;
+    padding: 10px 0;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .mobileNavLink:hover {
+    text-decoration: underline;
+  }
+
+  .sfilter {
+    font-size: 12px;
+    display: none;
+  }
+  .filterSection {
+    display: none;
+  }
+
+  .cardCustomSize {
+    width: 100%;
+    max-width: 380px; /* Adjust max width */
+    height: 450px; /* Adjust height as needed */
+    margin: auto; /* Center the card */
+    box-shadow: 0 12px 30px rgba(75, 75, 75, 0.2);
+    border-radius: 20px !important;
+    padding: 0px;
+    transition: transform 0.3s;
+    cursor: pointer;
+  }
+  .cardprice {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .searchBarContainer {
+    display: none;
+  }
+
+  .dropdown {
+    display: none;
+  }
+  .toppgBnglr {
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+
+  /* Filter section mobile*/
+  .filterButtonWrapper.d-none.d-md-block {
+    display: none !important;
+  }
+
+  .filterButtonContainer {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .filterButton {
+    flex: 1;
+    text-align: center;
+  }
+
+
+}

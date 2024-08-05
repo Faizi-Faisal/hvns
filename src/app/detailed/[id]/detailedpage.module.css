@@ -1,0 +1,452 @@
+/* src/app/detailed/[id]/detailedpage.module.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Betm+Rounded+Medium:wght@400&display=swap');
+
+.containerDpage {
+  max-width: 1200px;
+  margin: 0 90px;
+  padding: 20px;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: 2fr;
+}
+
+.carouselContainer {
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
+.carouselImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.descriptionContainer {
+  margin-top: 30px;
+}
+
+.rightContainer {
+  padding: 20px;
+  /* Add your styles for the right container here */
+}
+
+.fixedBottomContainer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+  border-top: 1px solid #ddd;
+  padding: 10px;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+}
+
+.topSection {
+  margin-bottom: 5px;
+}
+
+.priceContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.priceLabel {
+  font-size: 10px;
+  color: grey;
+  margin-left: 10px;
+}
+
+.fixedPrice {
+  font-size: 18px;
+  font-weight: bold;
+  color: #1A5319;
+  margin-left: 10px;
+  position: relative;
+  bottom: 5px;
+}
+
+.requestCallbackButton {
+  background-color: #508D4E;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-left: 10px;
+  position: relative;
+  bottom: 10px;
+}
+
+/* Full-screen styles */
+.fullScreenOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fullScreenImage {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* Hostel info styles */
+.hostelInfo, .hostelInfoMobile {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.hostelInfoMobile {
+  display: none;
+}
+
+.hostelName {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: start;
+}
+
+.hostelLocation {
+  font-size: 16px;
+  color: grey;
+  text-align: start;
+  line-height: 1.5;
+  margin-bottom: 50px;
+}
+
+/* Description Section expanding */
+
+.descriptionContainer {
+  margin-top: 30px;
+}
+
+.descriptionWrapper {
+  position: relative;
+}
+
+.descriptionText {
+  font-size: 16px;
+  color: grey;
+  font-family: 'Betm Rounded Medium', sans-serif;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+/* Fallback for non-WebKit browsers */
+.truncated {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  max-height: 5.7em; /* Adjust based on line height */
+}
+
+.expanded {
+  display: block;
+  max-height: none;
+}
+
+/* Position the button at the end of the text */
+.toggleButton {
+  background: none;
+  border: none;
+  color: #508D4E;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+  text-decoration: underline;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: white; /* Adjust to match your container */
+}
+
+.toggleButton:hover {
+  text-decoration: none;
+}
+
+.leftContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.amenitiesContainer {
+  margin-top: 30px;
+}
+
+.amenitiesTitle {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.amenitiesList {
+  list-style: none;
+}
+
+
+.amenityItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #D6EFD8;
+  padding: 10px;
+  border-radius: 16px;
+  background-color: #f9f9f9;
+  width: 100px; /* Adjust width as needed */
+  height: 100px; /* Adjust height as needed */
+  text-align: center;
+}
+
+.icon {
+  font-size: 24px; /* Adjust icon size */
+  color: #80AF81;
+  margin-bottom: 5px;
+}
+
+.amenityName {
+  font-size: 14px;
+  color: grey;
+}
+.amenitiesList {
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap onto the next line */
+  gap: 10px; /* Optional: Adds space between items */
+  list-style-type: none; /* Removes default list styling */
+}
+
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .containerDpage {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    width: 100%;
+    margin-bottom: 100px;
+  }
+
+  .gridContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .carouselContainer {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .carouselImage {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+  }
+
+  .rightContainer {
+    display: none;
+  }
+
+  .fixedBottomContainer {
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+  }
+
+  .priceLabel {
+    font-size: 10px;
+    color: grey;
+    margin-left: 10px;
+  }
+
+  .fixedPrice {
+    font-size: 18px;
+    font-weight: bold;
+    color: #1A5319;
+    margin-left: 10px;
+    position: relative;
+    bottom: 5px;
+  }
+
+  .requestCallbackButton {
+    background-color: #508D4E;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-left: 10px;
+    position: relative;
+    bottom: 10px;
+  }
+
+  .hostelInfo {
+    display: none;
+  }
+
+  .hostelInfoMobile {
+    display: block;
+    text-align: start;
+    margin-left: 15px;
+    font-family: 'Betm Rounded Medium', sans-serif;
+  }
+  .hostelName {
+    font-size: 18px;
+    margin-top: 20px;
+    font-family: 'Betm Rounded Medium', sans-serif;
+  }
+  .hostelLocation {
+    font-size: 12px;
+    line-height: 0%;
+    margin-bottom: 0px;
+  }
+
+
+  /* Description section mobile */
+
+  .descriptionContainer {
+    margin-left: 15px;
+    margin-top: 30px;
+    margin-right: 15px;
+  }
+
+  .descriptionTitle {
+    font-size: 14px;
+    font-family: 'Betm Rounded Medium', sans-serif;
+  }
+
+  .descriptionText {
+    font-size: 12px;
+    color: grey;
+    font-family: 'Betm Rounded Medium', sans-serif;
+    max-height: 5em; /* Adjust based on line height */
+    transition: max-height 0.3s ease;
+  }
+
+  .toggleButton {
+    font-size: 12px; /* Smaller font size for mobile screens */
+    font-weight: bold;
+    bottom: -2px;
+  }
+  .truncated {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    max-height: 4.6em; /* Adjust based on line height */
+  }
+  .expanded {
+    display: block;
+    max-height: none;
+  }
+
+  /* Aminities section */
+
+  .amenitiesContainer {
+    margin-top: 10px;
+    margin-left: 15px;
+  }
+  
+  .amenitiesTitle {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .amenitiesList {
+    list-style: none;
+    padding: 3px;
+    margin-left: 10px;
+  }
+  
+  .amenitiesList {
+    list-style: none;
+  }
+  
+  
+  .amenityItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #D6EFD8;
+    padding: 10px;
+    border-radius: 14px;
+    background-color: #f9f9f9;
+    width: 50px; /* Adjust width as needed */
+    height: 50px; /* Adjust height as needed */
+    text-align: center;
+  }
+  
+  .icon {
+    font-size: 16px; /* Adjust icon size */
+    color: #80AF81;
+    margin-bottom: 5px;
+  }
+  
+  .amenityName {
+    font-size: 12px;
+    color: grey;
+  }
+  .amenitiesList {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap onto the next line */
+    gap: 20px; /* Optional: Adds space between items */
+    list-style-type: none; /* Removes default list styling */
+  }
+  
+
+  
+}
+
+/* Desktop Styles */
+@media (min-width: 769px) {
+  .gridContainer {
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+  }
+
+  .hostelInfo {
+    display: block;
+  }
+
+  .hostelInfoMobile {
+    display: none;
+  }
+  .fixedBottomContainer {
+    display: none;
+  }
+  .toggleButton {
+    font-size: 14px; /* Smaller font size for mobile screens */
+   
+  }
+}
